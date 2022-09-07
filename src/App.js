@@ -49,8 +49,8 @@ function App() {
         return {
           id: productData.id,
           title: productData.title,
-          openingText: productData.description,
-          releaseDate: productData.images[0],
+          description: productData.description,
+          image: productData.images[0],
           price:productData.price,
           brand:productData.brand
         };
@@ -110,10 +110,10 @@ useEffect(() => {
       <div className='data'>{console.log(data,'render')}
       {data.map((product) => (
         <div key={product.id} className='product'>
-        <img src={product.releaseDate} alt='images'/>
+        <img src={product.image} alt='images'/>
         <p>{product.title}</p>
         <p>BrandName : {product.brand}</p>
-        <p className='text'>{product.openingText}</p>
+        <p className='text'>{product.description}</p>
           <p>Price : ₹{product.price}</p>   
         </div>
       ))}
