@@ -22,8 +22,8 @@ function App() {
         return {
           id: productData.id,
           title: productData.title,
-          openingText: productData.description,
-          releaseDate: productData.images[0],
+          description: productData.description,
+          image: productData.images[0],
           price:productData.price,
           brand:productData.brand
         };
